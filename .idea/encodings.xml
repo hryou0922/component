@@ -2,6 +2,10 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/httpclient" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/javabasic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsoup" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lua" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lua" charset="UTF-8" />
   </component>
 </project>

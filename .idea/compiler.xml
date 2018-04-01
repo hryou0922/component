@@ -6,12 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="httpclient" />
         <module name="javabasic" />
+        <module name="jsoup" />
+        <module name="lua" />
+        <module name="luademo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="component" target="1.8" />
+      <module name="httpclient" target="1.8" />
       <module name="javabasic" target="1.8" />
+      <module name="jsoup" target="1.8" />
+      <module name="lua" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
