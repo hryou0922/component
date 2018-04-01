@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.sourceforge.tess4j:tess4j:3.4.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/tess4j/tess4j/3.4.6/tess4j-3.4.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/tess4j/tess4j/3.4.6/tess4j-3.4.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/sourceforge/tess4j/tess4j/3.4.6/tess4j-3.4.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

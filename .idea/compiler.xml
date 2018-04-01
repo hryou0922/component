@@ -6,19 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="apache" />
+        <module name="fastjson" />
         <module name="httpclient" />
         <module name="javabasic" />
         <module name="jsoup" />
         <module name="lua" />
         <module name="luademo" />
+        <module name="netty" />
+        <module name="tess4j" />
+        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="apache" target="1.8" />
       <module name="component" target="1.8" />
+      <module name="fastjson" target="1.8" />
       <module name="httpclient" target="1.8" />
       <module name="javabasic" target="1.8" />
       <module name="jsoup" target="1.8" />
       <module name="lua" target="1.8" />
+      <module name="netty" target="1.8" />
+      <module name="tess4j" target="1.8" />
+      <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
