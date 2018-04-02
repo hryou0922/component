@@ -34,6 +34,8 @@
         - Semaphore信号量用法
     - path：java中各类路径用法
         - JavaBasePathMain: Java获取本地路径的多种方式
+    - regular: 正则表达式的用法
+        - NumberRegular： 从字符串中过滤出数字，或相反的操作
     - unsafe
         - Unsafe类的用法演示
 ## httpclient: httpclient的用法
