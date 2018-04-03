@@ -19,6 +19,7 @@
         <module>netty</module>
         <module>tess4j</module>
         <module>zookeeper</module>
+        <module>thumbnailator</module>
     </modules>
 
     <properties>

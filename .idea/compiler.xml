@@ -15,6 +15,7 @@
         <module name="luademo" />
         <module name="netty" />
         <module name="tess4j" />
+        <module name="thumbnailator" />
         <module name="zookeeper" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="lua" target="1.8" />
       <module name="netty" target="1.8" />
       <module name="tess4j" target="1.8" />
+      <module name="thumbnailator" target="1.8" />
       <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/lua/lua.iml" filepath="$PROJECT_DIR$/lua/lua.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/tess4j/tess4j.iml" filepath="$PROJECT_DIR$/tess4j/tess4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thumbnailator/thumbnailator.iml" filepath="$PROJECT_DIR$/thumbnailator/thumbnailator.iml" />
       <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />
     </modules>
   </component>
