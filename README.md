@@ -61,7 +61,8 @@
 	- TesseractChineseTest: OCR解析中文图片截图
 	- TesseractPdfTest：OCR解析pdf英文文档
 	- TesseractTest：OCR解析图片
-# thumbnailator:thumbnailator是一个用来生成图像缩略图的Java类库
+# thumbnailator:生成图像缩略图
+- thumbnailator是一个用来生成图像缩略图的Java类库
 - com.hry.component.thumbnailator.simple： 演示组件对图片如下的操作
     - 指定大小进行缩放
     - 按照指定比例进行缩放
