@@ -1,7 +1,7 @@
 ## 这个工程使用的Spring Boot 2 以上的版本
 
 ## apache: apache中通用的组件用法
-- com.hry.component.apache
+- com.hry.java.apache
 	- beanutils
 		- BeanUtilTest：BeanUtil的常用操作方法
 		- ConstructorUtilsTest：预留
@@ -21,7 +21,7 @@
 		- ValidateTest: 对输入的数据进行合法性检查
 
 ## fastjson
-- com.hry.component.fastjson
+- com.hry.java.fastjson
     - serializer
 	    - VO：序列化和各种注解使用; 序列化; 定义key名称，定义字段顺序，格式化时间
 	- simple
@@ -30,7 +30,7 @@
 - com.hry.java
     - cls: class的反射用法
     - consistencyhash: 一致性哈希散列函数的实现
-    - multithread: 多线程用法
+    - concurrent: 多线程用法
         - Semaphore信号量用法
     - path：java中各类路径用法
         - JavaBasePathMain: Java获取本地路径的多种方式
@@ -39,7 +39,7 @@
     - unsafe
         - Unsafe类的用法演示
 ## httpclient: httpclient的用法
-- com.hry.component.httpclient.
+- com.hry.java.httpclient.
     - example
         - CloseableHttpClientGetTest: 模拟get请求
         - CloseableHttpClientGetWithParameterTest: 带参数的get请求
@@ -53,17 +53,17 @@
 ## lua：lua的脚本用法
 
 ## netty: netty的用法总结
-- com.hry.component.netty
+- com.hry.java.netty
     - 通过客户端和服务端模拟netty通信
 ## tess4j:  文字、图片的文字识别
-- com.hry.component.tess4j:
+- com.hry.java.tess4j:
     - TesseractChinesePdfTest: OCR解析PDF中文文档
 	- TesseractChineseTest: OCR解析中文图片截图
 	- TesseractPdfTest：OCR解析pdf英文文档
 	- TesseractTest：OCR解析图片
 # thumbnailator:生成图像缩略图
 - thumbnailator是一个用来生成图像缩略图的Java类库
-- com.hry.component.thumbnailator.simple： 演示组件对图片如下的操作
+- com.hry.java.thumbnailator.simple： 演示组件对图片如下的操作
     - 指定大小进行缩放
     - 按照指定比例进行缩放
     - 不按照比例，强制指定大小进行缩放
@@ -73,7 +73,7 @@
     - 转化图片格式
     - 对文件夹所有图片进行操作
 ## zookeeper: zookeeper的用法
-- com.hry.component.zookeeper：暂时没试试
+- com.hry.java.zookeeper：暂时没试试
     - 1
 
 
