@@ -22,17 +22,19 @@ public class TesseractChineseSelfTest {
 		 * 下载地址：https://github.com/tesseract-ocr/tessdata
 		 * 
 		 */
-        tessreact.setDatapath(System.getProperty("user.dir") + "/tess4j/src/main/resources/com/hry/java/tess4j/tessdata/");
+        tessreact.setDatapath(System.getProperty("user.dir") + "/tess4j/src/main/resources/com/hry/java/tess4j/v4/tessdata/");
         // 设置识别语言，默认为英文
         tessreact.setLanguage("chi_sim");
 
 		try {
 			File[] files = root.listFiles();
 			for (File file : files) {
+				System.out.println("=" + file.toString());
 				String result = tessreact.doOCR(file);
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
-				System.out.println("图片名：" + fileName + " 识别结果：" + result);
+				System.out.println("图片名：" + fileName + " 识别结果：" );
+				System.out.println(result);
 			}
 		} catch (TesseractException e) {
 			System.err.println(e.getMessage());
