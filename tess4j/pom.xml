@@ -12,11 +12,19 @@
     <artifactId>tess4j</artifactId>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
         <dependency>
             <groupId>net.sourceforge.tess4j</groupId>
             <artifactId>tess4j</artifactId>
-            <version>3.4.6</version>
+            <version>4.2.2</version>
         </dependency>
+
+
+        <!--<dependency>-->
+            <!--<groupId>net.sourceforge.tess4j</groupId>-->
+            <!--<artifactId>tess4j</artifactId>-->
+            <!--<version>3.4.6</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>
