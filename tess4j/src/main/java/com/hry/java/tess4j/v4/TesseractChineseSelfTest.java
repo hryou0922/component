@@ -34,7 +34,7 @@ public class TesseractChineseSelfTest {
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
 				System.out.println("图片名：" + fileName + " 识别结果：" );
-				System.out.println(result);
+				System.out.println(result.replaceAll(" ",""));
 			}
 		} catch (TesseractException e) {
 			System.err.println(e.getMessage());
