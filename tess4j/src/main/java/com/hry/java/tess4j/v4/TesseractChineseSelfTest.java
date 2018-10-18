@@ -13,7 +13,8 @@ import java.io.File;
 public class TesseractChineseSelfTest {
 	public static void main(String[] args) {
 		// user.dir = D:\eclipse_study\simpletool
-		File root = new File("C:\\Users\\Administrator\\Desktop\\tmp\\other\\ocr");
+	//	File root = new File("C:\\Users\\Administrator\\Desktop\\tmp\\other\\ocr");
+		File root = new File("C:\\Users\\hry\\Desktop\\tmp\\other\\ocr");
 		System.out.println(root.getAbsolutePath());
 		Tesseract tessreact = new Tesseract();
 		

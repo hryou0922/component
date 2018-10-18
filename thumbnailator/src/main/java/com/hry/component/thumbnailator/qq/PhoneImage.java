@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class PhoneImage {
-    private static final int num = 16;
+    private static final int num = 1;
     private static final List<Future> futureList = new ArrayList<Future>(num);
     private static final ExecutorService executorService = Executors.newFixedThreadPool(num);
 
@@ -24,7 +24,8 @@ public class PhoneImage {
         File[] dir = new File(imgDir).listFiles();
         for(File file : dir){
             if(file.getAbsolutePath().endsWith("rar")
-                    || file.getAbsolutePath().endsWith("swf")){
+                    || file.getAbsolutePath().endsWith("swf")
+                    || file.getAbsolutePath().endsWith("mp4")){
                 continue;
             }
             if(file.isDirectory()){
