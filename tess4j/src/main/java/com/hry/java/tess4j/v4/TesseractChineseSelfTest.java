@@ -3,6 +3,7 @@ package com.hry.java.tess4j.v4;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 
 /**
@@ -26,11 +27,21 @@ public class TesseractChineseSelfTest {
         // 设置识别语言，默认为英文
         tessreact.setLanguage("chi_sim");
 
+    	boolean opt = false;
+
 		try {
 			File[] files = root.listFiles();
 			for (File file : files) {
 				System.out.println("=" + file.toString());
-				String result = tessreact.doOCR(file);
+				String result = null;
+				if(opt){
+					BufferedImage bufferedImage = TesseractUtil.optimizeImage(file.getPath());
+					result = tessreact.doOCR(bufferedImage);
+				}else {
+					result = tessreact.doOCR(file);
+				}
+
+
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
 				System.out.println("图片名：" + fileName + " 识别结果：" );
