@@ -4,6 +4,7 @@ import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.apache.commons.io.FileUtils;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,12 +32,22 @@ public class TesseractChineseSelfTest {
         // 设置识别语言，默认为英文
         tessreact.setLanguage("chi_sim");
 
+    	boolean opt = false;
+
 		try {
 			List<String> arrayList = new ArrayList<>();
 			File[] files = root.listFiles();
 			for (File file : files) {
 				System.out.println("=" + file.toString());
-				String result = tessreact.doOCR(file);
+				String result = null;
+				if(opt){
+					BufferedImage bufferedImage = TesseractUtil.optimizeImage(file.getPath());
+					result = tessreact.doOCR(bufferedImage);
+				}else {
+					result = tessreact.doOCR(file);
+				}
+
+
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
 				result = result.replaceAll(" ","").replaceAll("\\r","")
