@@ -20,6 +20,7 @@
         <module>tess4j</module>
         <module>zookeeper</module>
         <module>thumbnailator</module>
+        <module>guava</module>
     </modules>
 
     <properties>

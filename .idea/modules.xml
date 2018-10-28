@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/apache/apache.iml" filepath="$PROJECT_DIR$/apache/apache.iml" />
       <module fileurl="file://$PROJECT_DIR$/component.iml" filepath="$PROJECT_DIR$/component.iml" />
       <module fileurl="file://$PROJECT_DIR$/fastjson/fastjson.iml" filepath="$PROJECT_DIR$/fastjson/fastjson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guava/guava.iml" filepath="$PROJECT_DIR$/guava/guava.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpclient/httpclient.iml" filepath="$PROJECT_DIR$/httpclient/httpclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabasic/javabasic.iml" filepath="$PROJECT_DIR$/javabasic/javabasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/jsoup/jsoup.iml" filepath="$PROJECT_DIR$/jsoup/jsoup.iml" />

@@ -26,6 +26,8 @@
 	    - VO：序列化和各种注解使用; 序列化; 定义key名称，定义字段顺序，格式化时间
 	- simple
 		- SimpleMain：最简单的应用
+## guava : guava的基本用法
+    
 ## javabasic: jdk的基本用法 
 - com.hry.java
     - cls: class的反射用法
@@ -38,6 +40,8 @@
         - NumberRegular： 从字符串中过滤出数字，或相反的操作
     - unsafe
         - Unsafe类的用法演示
+    - utils: 工作类
+        - DateUtils：时间格式化操作类
 ## httpclient: httpclient的用法
 - com.hry.java.httpclient.
     - example

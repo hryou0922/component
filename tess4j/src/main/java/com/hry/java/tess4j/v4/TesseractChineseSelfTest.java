@@ -2,8 +2,12 @@ package com.hry.java.tess4j.v4;
 
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 中文识别
@@ -28,17 +32,27 @@ public class TesseractChineseSelfTest {
         tessreact.setLanguage("chi_sim");
 
 		try {
+			List<String> arrayList = new ArrayList<>();
 			File[] files = root.listFiles();
 			for (File file : files) {
 				System.out.println("=" + file.toString());
 				String result = tessreact.doOCR(file);
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
-				System.out.println("图片名：" + fileName + " 识别结果：" );
-				System.out.println(result.replaceAll(" ",""));
+				result = result.replaceAll(" ","").replaceAll("\\r","")
+					.replaceAll("\\n","");
+		//		System.out.println("图片名：" + fileName + " 识别结果：" );
+		//		System.out.println();
+				arrayList.add(result);
+				arrayList.add("\\n");
 			}
+
+			File saveFile = new File("C:\\Users\\hry\\Desktop\\tmp\\today\\ocr.txt");
+			FileUtils.writeLines(saveFile, arrayList);
 		} catch (TesseractException e) {
 			System.err.println(e.getMessage());
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
