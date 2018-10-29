@@ -8,7 +8,12 @@
 		- ConverterTest：注册转换类
 		- PropertyUtilsTest：类似BeanUtil
     - io: io操作demo
-        - TODO
+        - FilenameUtilsDemo: 对文件名、文件路径操作的封装
+        - FileUtils：对文件操作
+            - 文件：复制、移动
+            - 文件：把字符串列表、字符串、字节数组写入文件；读取文件到字符串列表、字符串、字节数组
+            - 文件夹：创建、复制、删除、清空
+            - 其他：获取临时文件、文件夹、文件大小、文件的修改时间修改和比较
     - lang3
 		- ArrayUtilsTest：对数组进行操作类
 	    - DateUtilsTest: 日期操作工具类
@@ -41,7 +46,7 @@
     - unsafe
         - Unsafe类的用法演示
     - utils: 工作类
-        - DateUtils：时间格式化操作类
+        - DateUtils：时间格式化操作类，时间操作类
 ## httpclient: httpclient的用法
 - com.hry.java.httpclient.
     - example
