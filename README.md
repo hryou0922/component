@@ -8,7 +8,7 @@
 		- ConverterTest：注册转换类
 		- PropertyUtilsTest：类似BeanUtil
     - io: io操作demo
-        - FilenameUtilsDemo: 对文件名、文件路径操作的封装
+        - FilenameUtilsDemo: 对文件名、文件路径、文件扩展名操作的封装
         - FileUtils：对文件操作
             - 文件：复制、移动
             - 文件：把字符串列表、字符串、字节数组写入文件；读取文件到字符串列表、字符串、字节数组
