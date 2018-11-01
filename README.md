@@ -39,6 +39,27 @@
     - consistencyhash: 一致性哈希散列函数的实现
     - concurrent: 多线程用法
         - Semaphore信号量用法
+    - lambda: lambda的用法 
+        - CollectorsDemo
+            - 过滤：按照给定的要求对集合进行筛选满足条件的元素，java8提供的筛选操作包括：filter、distinct、limit、skip
+            - 映射：仅输出需要的字段数据。主要包含两类映射操作：map和flatMap。
+                - map:扩展方法有mapToDouble、mapToInt、mapToLong
+                - flatMap:与map的区别在于 flatMap是将一个流中的每个值都转成一个个流，然后再将这些流扁平化成为一个流
+                    - 扩展方法：flatMapToDouble、flatMapToInt、flatMapToLong
+            - 查找：match。allMatch、anyMatch、noneMatch、findFirst、findAny
+            - 归约: reduce。对经过参数化操作后的集合进行进一步的运算
+            - collect 归约操作
+                - 简单的收集操作，是对处理结果的封装：Collectors.toList、Collectors.toSet、Collectors.toMap
+                -  计算列表数量：Collectors.counting() 或stream().count()
+                -  最大年龄：(Collectors.maxBy
+                -  最小年龄：Collectors.minBy
+                -  列表值相加：Collectors.summingInt
+                -  一次性得到元素个数、总和、均值、最大值、最小值: IntSummaryStatistics
+                -  字符串拼接：Collectors.joining()
+            - collect 分组 操作
+                - 对列表进行分组，并可对分组进行操作：Collectors.groupingBy
+            - collect 分区 操作
+                - 分区可以看做是分组的一种特殊情况，在分区中key只有两种情况：true或false：Collectors.partitioningBy
     - path：java中各类路径用法
         - JavaBasePathMain: Java获取本地路径的多种方式
     - regular: 正则表达式的用法
