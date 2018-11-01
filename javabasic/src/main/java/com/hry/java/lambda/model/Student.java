@@ -1,5 +1,7 @@
 package com.hry.java.lambda.model;
 
+import com.alibaba.fastjson.JSON;
+
 public class Student {
     /** 学号 */
     private long id;
@@ -72,5 +74,9 @@ public class Student {
 
     public void setSchool(String school) {
         this.school = school;
+    }
+
+    public String toString(){
+        return JSON.toJSONString(this);
     }
 }
