@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classRoom>
+    <name>配置总名称</name>
+    <student id="1" name="张三" sex="男" birthDate="1999-10-22" />
+    <student id="2" name="李四" sex="女" birthDate="1997-12-23"  />
+</classRoom>

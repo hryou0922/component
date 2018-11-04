@@ -68,6 +68,9 @@
         - Unsafe类的用法演示
     - utils: 工作类
         - DateUtils：时间格式化操作类，时间操作类
+    - xml: JAXB：实现xml和java对象互转
+        - JAXBManager：基本用法，演示@XmlRootElement，@XmlAccessorType，@XmlElement用法
+        - JAXBManager：演示 @XmlAttribute， @XmlJavaTypeAdapter，XmlAdapter用法
 ## httpclient: httpclient的用法
 - com.hry.java.httpclient.
     - example
