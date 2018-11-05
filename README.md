@@ -60,6 +60,7 @@
                 - 对列表进行分组，并可对分组进行操作：Collectors.groupingBy
             - collect 分区 操作
                 - 分区可以看做是分组的一种特殊情况，在分区中key只有两种情况：true或false：Collectors.partitioningBy
+        - StreamsEffectivenessDemo：测试串行和并行stream的执行时间，两者相差一倍
     - path：java中各类路径用法
         - JavaBasePathMain: Java获取本地路径的多种方式
     - regular: 正则表达式的用法
