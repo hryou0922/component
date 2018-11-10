@@ -65,6 +65,7 @@
         - JavaBasePathMain: Java获取本地路径的多种方式
     - regular: 正则表达式的用法
         - NumberRegular： 从字符串中过滤出数字，或相反的操作
+        - PatternDemo:  Pattern实例是不可变的，可线程安全; Matcher不支持并发请求
     - unsafe
         - Unsafe类的用法演示
     - utils: 工作类
