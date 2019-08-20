@@ -6,33 +6,33 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="javabasic" />
+        <module name="zookeeper" />
+        <module name="httpclient" />
+        <module name="netty" />
         <module name="apache" />
+        <module name="tess4j" />
+        <module name="lua" />
         <module name="fastjson" />
         <module name="guava" />
-        <module name="httpclient" />
-        <module name="javabasic" />
         <module name="jsoup" />
-        <module name="lua" />
-        <module name="luademo" />
-        <module name="netty" />
-        <module name="tess4j" />
         <module name="thumbnailator" />
-        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="apache" target="1.8" />
-      <module name="component" target="1.8" />
-      <module name="fastjson" target="1.8" />
-      <module name="guava" target="1.8" />
-      <module name="httpclient" target="1.8" />
-      <module name="javabasic" target="1.8" />
-      <module name="jsoup" target="1.8" />
-      <module name="lua" target="1.8" />
-      <module name="netty" target="1.8" />
-      <module name="tess4j" target="1.8" />
-      <module name="thumbnailator" target="1.8" />
-      <module name="zookeeper" target="1.8" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apache" options="-parameters" />
+      <module name="fastjson" options="-parameters" />
+      <module name="guava" options="-parameters" />
+      <module name="httpclient" options="-parameters" />
+      <module name="javabasic" options="-parameters" />
+      <module name="jsoup" options="-parameters" />
+      <module name="lua" options="-parameters" />
+      <module name="netty" options="-parameters" />
+      <module name="tess4j" options="-parameters" />
+      <module name="thumbnailator" options="-parameters" />
+      <module name="zookeeper" options="-parameters" />
+    </option>
   </component>
 </project>

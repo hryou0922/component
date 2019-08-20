@@ -1,5 +1,20 @@
 ## 这个工程使用的Spring Boot 2 以上的版本
 
+## 算法
+- com.hry.algorithm
+    - recursive 递归算法
+        - NQueen/NQueenII： 八皇后问题
+    - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
+        - 插入排序:InsertSort （队列分为两部分，左边是已经排序好的，从右边未排序队列中获取值，并按照顺序插入左边队列中）
+        - 希尔排序:
+        - 选择排序: （从未排序的队列中选取一个最小/大值）
+        - 冒泡排序: （重复比较相邻的两个值）
+        - 归并排序
+        - 快速排序
+        - 堆排序
+        - 基数排序
+          
+
 ## apache: apache中通用的组件用法
 - com.hry.java.apache
 	- beanutils
