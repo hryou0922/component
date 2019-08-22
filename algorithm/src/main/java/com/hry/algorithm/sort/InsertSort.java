@@ -10,7 +10,7 @@ package com.hry.algorithm.sort;
 public class InsertSort implements ISort {
 
     @Override
-    public int[] sort(int[] intArray){
+    public int[] sortArray(int[] intArray){
         if(intArray == null || intArray.length == 0){
             return intArray;
         }

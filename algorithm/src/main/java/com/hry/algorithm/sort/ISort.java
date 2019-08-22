@@ -7,5 +7,5 @@ package com.hry.algorithm.sort;
  */
 public interface ISort {
 
-    int[] sort(int[] intArray);
+    int[] sortArray(int[] intArray);
 }

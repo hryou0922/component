@@ -1,7 +1,7 @@
 package com.hry.algorithm.sort;
 
 /**
- *  选择排序(Selection sort)也是一种简单直观的排序算法。
+ *  选择排序(Selection sortArray)也是一种简单直观的排序算法。
  *  - 直接选择排序
  *
  *  算法步骤：
@@ -13,7 +13,34 @@ package com.hry.algorithm.sort;
  */
 public class SelectionSort implements ISort {
     @Override
-    public int[] sort(int[] intArray) {
-        return new int[0];
+    public int[] sortArray(int[] intArray) {
+        if(intArray == null || intArray.length == 0){
+            return intArray;
+        }
+
+        // 从索引0开始选择，直至倒数第二个，判断哪个索引是最小值，并填写到索引0位置上，依次类推，最后一个索引不需要操作
+        for(int i = 0; i < intArray.length -1 ; i++){
+            // 最小值的索引
+            int min = i;
+            // 从索引i+1 开始，找出最小的值
+            for(int j = i+1; j < intArray.length; j++){
+                if(intArray[j] < intArray[min]){
+                    min = j;
+                }
+            }
+
+            if(min != i){
+                // 如果发生变化，则进行交换
+                swap(intArray, min ,i);
+            }
+        }
+
+        return intArray;
+    }
+
+    private void swap(int[] intArray, int min, int i) {
+        int tmp = intArray[min];
+        intArray[min] = intArray[i];
+        intArray[i] = tmp;
     }
 }
