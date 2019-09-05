@@ -90,6 +90,13 @@ public class SortTest {
         testN(shellSort, 20, 1000);
     }
 
+    @Test
+    public void heapSort(){
+        HeapSort shellSort = new HeapSort();
+ //       testN(shellSort, 20, 1000);
+        test(shellSort, 20);
+    }
+
 
     private void test(ISort sort, int m){
         int[] intArray = generateArray(m);
