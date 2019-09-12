@@ -7,12 +7,16 @@
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
         - letcode: https://leetcode.com/problems/sort-an-array/submissions/
         - 插入排序:InsertSort （队列分为两部分，左边是已经排序好的，从右边未排序队列中获取值，并按照顺序插入左边队列中）
+            - 执行时间 593 ms
         - 希尔排序: ShellSort （记录按下标的一定增量分组，对每组使用直接插入排序算法排序）
         - 选择排序: SelectionSort（从未排序的队列中选取一个最小/大值）
         - 冒泡排序: BubbleSort（重复比较相邻的两个值）
-        - 归并排序
-        - 快速排序
-        - 堆排序
+            - 执行时间超时
+        - 归并排序：
+        - 快速排序：QuickSort（）
+            - 执行时间 5ms
+        - 堆排序: HeapSort （1. 从最后一个非叶子节点开始，循环向上完成大堆的排序； 2. 将0个元素和最后交换，再对0-(length-1)执行排序；3. 子树大堆排序：首元素排序，从左右节点选取大的比较，和首元素比较，如果小于首元素，则结束，否则交换， 循环向下层处理）
+            - 执行时间 578 ms -> 9s
         - 基数排序
           
 
