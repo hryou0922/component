@@ -97,9 +97,17 @@ public class SortTest {
         test(shellSort, 20);
     }
 
+    @Test
+    public void quickSort(){
+        QuickSort quickSort = new QuickSort();
+        //       testN(shellSort, 20, 1000);
+        testN(quickSort, 20,1000);
+    }
+
 
     private void test(ISort sort, int m){
         int[] intArray = generateArray(m);
+        System.out.println("排序前记录" + Arrays.toString(intArray));
         intArray = sort.sortArray(intArray);
         // oldArray
         int[] oldArray = new int[intArray.length];
