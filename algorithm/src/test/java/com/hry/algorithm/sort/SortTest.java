@@ -104,6 +104,27 @@ public class SortTest {
         testN(quickSort, 20,1000);
     }
 
+    @Test
+    public void mergeSort(){
+        MergeSort mergeSort = new MergeSort();
+        // test(mergeSort, 20);
+         testN(mergeSort, 20,1000);
+    }
+
+    @Test
+    public void radixSort(){
+        RadixSort radixSort = new RadixSort();
+        // test(mergeSort, 20);
+        testN(radixSort, 20, 1000);
+    }
+
+    @Test
+    public void radixSort2(){
+        RadixSort2 radixSort = new RadixSort2();
+        // test(mergeSort, 20);
+        testN(radixSort, 20, 1000);
+    }
+
 
     private void test(ISort sort, int m){
         int[] intArray = generateArray(m);
