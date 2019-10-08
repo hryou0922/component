@@ -22,6 +22,7 @@
         <module>thumbnailator</module>
         <module>guava</module>
         <module>algorithm</module>
+        <module>mock</module>
     </modules>
 
     <properties>

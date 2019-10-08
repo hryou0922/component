@@ -12,12 +12,14 @@
         - 选择排序: SelectionSort（从未排序的队列中选取一个最小/大值）
         - 冒泡排序: BubbleSort（重复比较相邻的两个值）
             - 执行时间超时
-        - 归并排序：
+        - 归并排序：MergeSort （是利用归并的思想实现的排序方法，该算法采用经典的分治（divide-and-conquer）策略（分治法将问题分(divide)成一些小的问题然后递归求解，而治(conquer)的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之)。）
+            - 执行时间 6ms
         - 快速排序：QuickSort（）
             - 执行时间 5ms
         - 堆排序: HeapSort （1. 从最后一个非叶子节点开始，循环向上完成大堆的排序； 2. 将0个元素和最后交换，再对0-(length-1)执行排序；3. 子树大堆排序：首元素排序，从左右节点选取大的比较，和首元素比较，如果小于首元素，则结束，否则交换， 循环向下层处理）
             - 执行时间 578 ms -> 9s
-        - 基数排序
+        - 基数排序：RadixSort
+            - 目前此算法只支持正整数
           
 
 ## apache: apache中通用的组件用法
@@ -106,6 +108,10 @@
 ## jsoup: jsoup用法 
 - 详细的用法见博客[Jsoup使用总结](https://blog.csdn.net/hry2015/article/details/72904416)
 ## lua：lua的脚本用法
+
+## mock: mock的基本用法
+- com.hry.mock
+    - third：调用第三方的mock测试
 
 ## netty: netty的用法总结
 - com.hry.java.netty
