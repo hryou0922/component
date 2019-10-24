@@ -120,7 +120,7 @@ public class SortTest {
 
     @Test
     public void radixSort2(){
-        RadixSort2 radixSort = new RadixSort2();
+        RadixSort radixSort = new RadixSort();
         // test(mergeSort, 20);
         testN(radixSort, 20, 1000);
     }
