@@ -5,6 +5,13 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
+ *
+ * 3. Longest Substring Without Repeating Characters
+ *  https://leetcode.com/problems/longest-substring-without-repeating-characters/
+ *
+ * 例子：
+ *  https://blog.csdn.net/liuchonge/article/details/62046271
+ *
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/23 11:35
  */
