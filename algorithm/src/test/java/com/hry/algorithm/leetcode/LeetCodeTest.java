@@ -31,4 +31,20 @@ public class LeetCodeTest {
         Assert.assertEquals(2, longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring2(testStr3));
 
     }
+
+    @Test
+    public void medianOfTwoSortedArrays(){
+        int[] nums1 = new int[]{1, 3};
+        int[] nums2 =  new int[]{2};
+
+        MedianOfTwoSortedArrays medianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
+        Assert.assertEquals(2.0, medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2), 0);
+
+
+        nums1 = new int[]{1, 2};
+        nums2 =  new int[]{3, 4};
+        Assert.assertEquals(2.5, medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2), 0);
+
+
+    }
 }
