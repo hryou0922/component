@@ -44,7 +44,33 @@ public class LeetCodeTest {
         nums1 = new int[]{1, 2};
         nums2 =  new int[]{3, 4};
         Assert.assertEquals(2.5, medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2), 0);
+    }
 
-
+    @Test
+    public void LongestPalindromicSubstring(){
+        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+        Assert.assertEquals("bab", longestPalindromicSubstring.longestPalindrome("babad"));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

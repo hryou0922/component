@@ -1,7 +1,26 @@
 ## 这个工程使用的Spring Boot 2 以上的版本
 
 ## 算法
+- 算法：
+    - book: 编程之法：面试和算法心得  https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html
 - com.hry.algorithm
+    - leetcode leetcode算法题
+        - TwoSum: https://leetcode.com/problems/two-sum/submissions/
+            - 执行时间25ms , 22.49%
+        - AddTwoNumbers：https://leetcode.com/problems/add-two-numbers/
+            - 有疑问
+        - LongestPalindromicSubstring： 最长回文
+            - https://leetcode.com/problems/longest-palindromic-substring/submissions/
+            - 算法1: 从第0个字符开始，每个字符向左右两边扩展，判断是否是回文。考虑回文是偶数和奇数情况
+            - 执行时间：15ms, 57.06%
+        - LongestSubstringWithoutRepeatingCharacters： https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/
+            - lengthOfLongestSubstring1()方法：O(n2)，2次for循环+使用set保持已经遍历的字符
+                - 45ms 18.90%
+            - lengthOfLongestSubstring2()方法：O(n)，1此for循环 + HashMap保留每个字符最近的索引（如果当前char的索引 < j，则忽略，否则替换）
+                - 7m 82.28%
+        - MedianOfTwoSortedArrays: https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
+            - 将两个数组合并到一个数据，取中间数的值（单数：n/2, 双数：n/2-1,n/2）: a. 比较两个数组，合并到数组，直至一个数组结束; b.第一个数组跌倒到末尾; c. 第二个数组跌倒到末尾;
+            - 执行时间： 2ms 99.97
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
