@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
  * 从数组中选出两个数，这两个数加起来的值等于目标值，返回这两个数的索引
@@ -12,7 +12,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/22 19:42
  */
-public class TwoSum {
+public class L001TwoSum {
     public int[] twoSum(int[] nums, int target) {
         int[] rtn = new int[]{-1,-1};
         // 不含尾巴

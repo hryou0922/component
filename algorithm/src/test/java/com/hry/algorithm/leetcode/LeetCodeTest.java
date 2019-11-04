@@ -1,5 +1,9 @@
 package com.hry.algorithm.leetcode;
 
+import com.hry.algorithm.leetcode.one_100.L003LongestSubstringWithoutRepeatingCharacters;
+import com.hry.algorithm.leetcode.one_100.L004MedianOfTwoSortedArrays;
+import com.hry.algorithm.leetcode.one_100.L005LongestPalindromicSubstring;
+import com.hry.algorithm.leetcode.one_100.L007ReverseInteger;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,7 +23,7 @@ public class LeetCodeTest {
         String testStr1 = "abcabcbb";
         String testStr2 = "pwwkew";
         String testStr3 = "abba";
-        LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
+        L003LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new L003LongestSubstringWithoutRepeatingCharacters();
         // 方法1
         Assert.assertEquals(3, longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring1(testStr1));
         Assert.assertEquals(3, longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring1(testStr2));
@@ -37,7 +41,7 @@ public class LeetCodeTest {
         int[] nums1 = new int[]{1, 3};
         int[] nums2 =  new int[]{2};
 
-        MedianOfTwoSortedArrays medianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
+        L004MedianOfTwoSortedArrays medianOfTwoSortedArrays = new L004MedianOfTwoSortedArrays();
         Assert.assertEquals(2.0, medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2), 0);
 
 
@@ -48,8 +52,17 @@ public class LeetCodeTest {
 
     @Test
     public void LongestPalindromicSubstring(){
-        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+        L005LongestPalindromicSubstring longestPalindromicSubstring = new L005LongestPalindromicSubstring();
         Assert.assertEquals("bab", longestPalindromicSubstring.longestPalindrome("babad"));
+    }
+
+    @Test
+    public void L007ReverseInteger(){
+        L007ReverseInteger l007ReverseInteger = new L007ReverseInteger();
+        Assert.assertEquals(321, l007ReverseInteger.reverse(123));
+        Assert.assertEquals(-54321, l007ReverseInteger.reverse(-12345));
+        Assert.assertEquals(0, l007ReverseInteger.reverse(1534236469));
+
     }
 }
 

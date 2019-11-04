@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
  * 88. Merge Sorted Array
@@ -10,7 +10,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/29 19:26
  */
-public class MergeSortedArray {
+public class L088MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 

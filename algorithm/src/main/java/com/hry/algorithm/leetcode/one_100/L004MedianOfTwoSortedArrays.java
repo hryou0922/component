@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
  *  4. Median of Two Sorted Arrays
@@ -8,7 +8,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/29 18:54
  */
-public class MedianOfTwoSortedArrays {
+public class L004MedianOfTwoSortedArrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int total = nums1.length + nums2.length;

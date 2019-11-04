@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
  *
@@ -11,7 +11,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/31 20:05
  */
-public class ZigZagConversion {
+public class L006ZigZagConversion {
 
     public String convert(String s, int numRows) {
         // 创建二位数组

@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -15,7 +15,7 @@ import java.util.Set;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/23 11:35
  */
-public class LongestSubstringWithoutRepeatingCharacters {
+public class L003LongestSubstringWithoutRepeatingCharacters {
 
 
 

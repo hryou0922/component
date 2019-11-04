@@ -1,4 +1,4 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
  *  最长回文子串
@@ -15,7 +15,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/29 20:02
  */
-public class LongestPalindromicSubstring {
+public class L005LongestPalindromicSubstring {
 
     public String longestPalindrome(String s) {
         if(s == null){

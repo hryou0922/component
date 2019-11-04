@@ -1,7 +1,8 @@
-package com.hry.algorithm.leetcode;
+package com.hry.algorithm.leetcode.one_100;
 
 /**
- * https://leetcode.com/problems/add-two-numbers/
+ * 2. Add Two Numbers
+ *  https://leetcode.com/problems/add-two-numbers/
  *  感觉这道题目有问题，解法里要保证2个列表的长度相同，但是题目里没有说明
  *
  * Example:
@@ -14,7 +15,7 @@ package com.hry.algorithm.leetcode;
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/23 11:21
  */
-public class AddTwoNumbers {
+public class L002AddTwoNumbers {
     public class ListNode {
      int val;
      ListNode next;
