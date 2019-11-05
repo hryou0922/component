@@ -1,9 +1,6 @@
 package com.hry.algorithm.leetcode;
 
-import com.hry.algorithm.leetcode.one_100.L003LongestSubstringWithoutRepeatingCharacters;
-import com.hry.algorithm.leetcode.one_100.L004MedianOfTwoSortedArrays;
-import com.hry.algorithm.leetcode.one_100.L005LongestPalindromicSubstring;
-import com.hry.algorithm.leetcode.one_100.L007ReverseInteger;
+import com.hry.algorithm.leetcode.one_100.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -62,8 +59,20 @@ public class LeetCodeTest {
         Assert.assertEquals(321, l007ReverseInteger.reverse(123));
         Assert.assertEquals(-54321, l007ReverseInteger.reverse(-12345));
         Assert.assertEquals(0, l007ReverseInteger.reverse(1534236469));
-
     }
+
+
+    @Test
+    public void L008StringToInteger(){
+        L008StringToInteger l008StringToInteger = new L008StringToInteger();
+        Assert.assertEquals(42, l008StringToInteger.myAtoi("42"));
+        Assert.assertEquals(-42, l008StringToInteger.myAtoi("   -42"));
+        Assert.assertEquals(4193, l008StringToInteger.myAtoi("4193 with words"));
+        Assert.assertEquals(0, l008StringToInteger.myAtoi("words and 987"));
+        Assert.assertEquals(-2147483648, l008StringToInteger.myAtoi("-91283472332"));
+        Assert.assertEquals(2147483647, l008StringToInteger.myAtoi("9223372036854775808"));
+    }
+
 }
 
 

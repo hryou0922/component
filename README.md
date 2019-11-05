@@ -21,6 +21,12 @@
         - MedianOfTwoSortedArrays: https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
             - 将两个数组合并到一个数据，取中间数的值（单数：n/2, 双数：n/2-1,n/2）: a. 比较两个数组，合并到数组，直至一个数组结束; b.第一个数组跌倒到末尾; c. 第二个数组跌倒到末尾;
             - 执行时间： 2ms 99.97
+        - L007ReverseInteger：翻转整形
+            - 考虑整形翻转后溢出的问题，新的值使用long; 
+            - 执行时间： 1ms, 100%
+        - L008StringToInteger:
+            - 重点：a. 字符串转化整形，即使使用long，还不够，需要特殊处理； b. 将char的处理分为 首字符处理+continue 和 0-9 处理  
+            - 执行时间: 1ms 100%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
