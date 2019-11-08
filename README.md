@@ -27,6 +27,9 @@
         - L008StringToInteger:
             - 重点：a. 字符串转化整形，即使使用long，还不够，需要特殊处理； b. 将char的处理分为 首字符处理+continue 和 0-9 处理  
             - 执行时间: 1ms 100%
+        - L009PalindromeNumber: 测试整数是否为回文
+            - 重点：a. 特殊值： <0, 0<x<9;  b. 回文的判断：偶数和奇数
+            - 执行时间 7m 67.93%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

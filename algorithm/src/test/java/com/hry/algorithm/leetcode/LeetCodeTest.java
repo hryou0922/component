@@ -73,6 +73,17 @@ public class LeetCodeTest {
         Assert.assertEquals(2147483647, l008StringToInteger.myAtoi("9223372036854775808"));
     }
 
+    @Test
+    public void L009PalindromeNumber(){
+        L009PalindromeNumber l009PalindromeNumber = new L009PalindromeNumber();
+
+        Assert.assertEquals(true, l009PalindromeNumber.isPalindrome(0));
+        Assert.assertEquals(true, l009PalindromeNumber.isPalindrome(11));
+        Assert.assertEquals(true, l009PalindromeNumber.isPalindrome(121));
+        Assert.assertEquals(false, l009PalindromeNumber.isPalindrome(-121));
+        Assert.assertEquals(false, l009PalindromeNumber.isPalindrome(10));
+    }
+
 }
 
 
