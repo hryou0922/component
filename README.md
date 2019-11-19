@@ -30,6 +30,9 @@
         - L009PalindromeNumber: 测试整数是否为回文
             - 重点：a. 特殊值： <0, 0<x<9;  b. 回文的判断：偶数和奇数
             - 执行时间 7m 67.93%
+        - L012IntegeToRoman: 整形转化为罗马数字
+            - 重点：列出每位的可能值
+            - 执行时间 5ms 100%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

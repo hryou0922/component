@@ -84,6 +84,18 @@ public class LeetCodeTest {
         Assert.assertEquals(false, l009PalindromeNumber.isPalindrome(10));
     }
 
+    @Test
+    public void L012IntegeToRoman(){
+        L012IntegeToRoman l012IntegeToRoman = new L012IntegeToRoman();
+
+        Assert.assertEquals("III", l012IntegeToRoman.intToRoman(3));
+        Assert.assertEquals("IV", l012IntegeToRoman.intToRoman(4));
+        Assert.assertEquals("IX", l012IntegeToRoman.intToRoman(9));
+        Assert.assertEquals("LVIII", l012IntegeToRoman.intToRoman(58));
+        Assert.assertEquals("MCMXCIV", l012IntegeToRoman.intToRoman(1994));
+
+    }
+
 }
 
 
