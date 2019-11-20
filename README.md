@@ -3,10 +3,15 @@
 ## 算法
 - 算法：
     - book: 编程之法：面试和算法心得  https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html
+    - leetcode分类总结 https://lefttree.gitbooks.io/leetcode-categories/sum/kSum.html
+    - 其他：https://www.douban.com/note/330562764/
 - com.hry.algorithm
     - leetcode leetcode算法题
-        - TwoSum: https://leetcode.com/problems/two-sum/submissions/
-            - 执行时间25ms , 22.49%
+        - L001TwoSum: https://leetcode.com/problems/two-sum/submissions/
+            - twoSum_1：穷举法
+                - 执行时间25ms , 22.49%
+            - twoSum_2： 用hashmap保存访问过的value, 对每个num[i],检查hashmap中是否有target - nums[i],扫完一遍就能够得到结果
+                - 执行时间3ms, 50%
         - AddTwoNumbers：https://leetcode.com/problems/add-two-numbers/
             - 有疑问
         - LongestPalindromicSubstring： 最长回文
@@ -33,6 +38,9 @@
         - L012IntegeToRoman: 整形转化为罗马数字
             - 重点：列出每位的可能值
             - 执行时间 5ms 100%
+        - L015Sum3：从数组中找出所有的3个数相加为0的组合
+            - threeSum_1：穷举法
+                - 执行时间，太久，无法通过
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

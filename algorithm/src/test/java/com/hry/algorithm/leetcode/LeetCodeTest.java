@@ -4,6 +4,8 @@ import com.hry.algorithm.leetcode.one_100.*;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * @author: huangrongyou@yixin.im
  * @date: 2019/10/22 19:50
@@ -11,7 +13,12 @@ import org.junit.Test;
 public class LeetCodeTest {
 
     @Test
-    public void twoSum(){
+    public void L001TwoSum(){
+        L001TwoSum l001TwoSum = new L001TwoSum();
+   //     Assert.assertArrayEquals(new int[]{0,1}, l001TwoSum.twoSum_2(new int[]{2, 7, 11, 15}, 9));
+    //    Assert.assertArrayEquals(new int[]{1,2}, l001TwoSum.twoSum_2(new int[]{3,2,4}, 6));
+        l001TwoSum.twoSum_2(new int[]{3,2,4}, 6);
+        System.out.println(Arrays.toString(l001TwoSum.twoSum_2(new int[]{2,7,11,15}, 9)));
 
     }
 
@@ -93,7 +100,12 @@ public class LeetCodeTest {
         Assert.assertEquals("IX", l012IntegeToRoman.intToRoman(9));
         Assert.assertEquals("LVIII", l012IntegeToRoman.intToRoman(58));
         Assert.assertEquals("MCMXCIV", l012IntegeToRoman.intToRoman(1994));
+    }
 
+    @Test
+    public void L015Sum3(){
+        L015Sum3 l015Sum3 = new L015Sum3();
+      //  System.out.println(l015Sum3.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
     }
 
 }
