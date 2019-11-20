@@ -105,7 +105,12 @@ public class LeetCodeTest {
     @Test
     public void L015Sum3(){
         L015Sum3 l015Sum3 = new L015Sum3();
-      //  System.out.println(l015Sum3.threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println(l015Sum3.threeSum_2(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println(l015Sum3.threeSum_2(new int[]{0,0,0,0}));
+        // [[-1,-1,2],[-1,0,1]]
+        System.out.println(l015Sum3.threeSum_2(new int[]{ -1,0,1,2,-1,-4}));
+
+
     }
 
 }
