@@ -38,6 +38,11 @@
         - L012IntegeToRoman: 整形转化为罗马数字
             - 重点：列出每位的可能值
             - 执行时间 5ms 100%
+        - L017LetterCombinationsofaPhoneNumber:
+            - letterCombinations: 递归 a. 使用 sb 保存字符； b. helper(a) = heler(idx) + heler(a-idx);  c. 每个idx处理循环字符数组: 添加到sb,执行 heler(a-idx)，从新增sb d. 当 idx 超过数字长度，则结束，将结果添加到列表中
+                - 执行时间 0ms 100%
+            - letterCombinations2 : a. LinkedList; b.将每个数字对应字符一次推入列表；在下一个数字时，循环已有所有的字符，并添加新数字所有对应的字符，并加入队列尾巴；循环直至，数字循环一遍
+                - 执行时间 0ms 100%
         - L015Sum3：从数组中找出所有的3个数相加为0的组合
             - threeSum_1：穷举法
                 - 执行时间，太久，无法通过
