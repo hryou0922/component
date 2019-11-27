@@ -38,16 +38,19 @@
         - L012IntegeToRoman: 整形转化为罗马数字
             - 重点：列出每位的可能值
             - 执行时间 5ms 100%
-        - L017LetterCombinationsofaPhoneNumber:
-            - letterCombinations: 递归 a. 使用 sb 保存字符； b. helper(a) = heler(idx) + heler(a-idx);  c. 每个idx处理循环字符数组: 添加到sb,执行 heler(a-idx)，从新增sb d. 当 idx 超过数字长度，则结束，将结果添加到列表中
-                - 执行时间 0ms 100%
-            - letterCombinations2 : a. LinkedList; b.将每个数字对应字符一次推入列表；在下一个数字时，循环已有所有的字符，并添加新数字所有对应的字符，并加入队列尾巴；循环直至，数字循环一遍
-                - 执行时间 0ms 100%
         - L015Sum3：从数组中找出所有的3个数相加为0的组合
             - threeSum_1：穷举法
                 - 执行时间，太久，无法通过
             - threeSum_1：a. sort + 双指针;  b. one + 2sum()
                 - 执行时间：43ms 38.59%
+         - L017LetterCombinationsofaPhoneNumber:
+            - letterCombinations: 递归 a. 使用 sb 保存字符； b. helper(a) = heler(idx) + heler(a-idx);  c. 每个idx处理循环字符数组: 添加到sb,执行 heler(a-idx)，从新增sb d. 当 idx 超过数字长度，则结束，将结果添加到列表中
+                - 执行时间 0ms 100%
+            - letterCombinations2 : a. LinkedList; b.将每个数字对应字符一次推入列表；在下一个数字时，循环已有所有的字符，并添加新数字所有对应的字符，并加入队列尾巴；循环直至，数字循环一遍
+                - 执行时间 0ms 100%
+         - L020ValidParentheses：
+            - 重点：a. LinkedList 做为 堆栈使用，新进后出： addFirst, poll; b. 左括号加入列表，如果是右括号，则将列表数据弹出，并获取对应的右括号，并比较两者是否相同
+            - 执行时间 1ms 98.83% 
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

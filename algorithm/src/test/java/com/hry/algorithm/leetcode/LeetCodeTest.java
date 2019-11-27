@@ -114,6 +114,17 @@ public class LeetCodeTest {
 
     }
 
+    @Test
+    public void L020ValidParentheses(){
+        L020ValidParentheses l020ValidParentheses = new L020ValidParentheses();
+
+        Assert.assertEquals(true, l020ValidParentheses.isValid("()"));
+        Assert.assertEquals(true, l020ValidParentheses.isValid("()[]{}"));
+        Assert.assertEquals(false, l020ValidParentheses.isValid("(]"));
+        Assert.assertEquals(false, l020ValidParentheses.isValid("([)]"));
+        Assert.assertEquals(true, l020ValidParentheses.isValid("{[]}"));
+    }
+
 
     @Test
     public void L015Sum3(){
