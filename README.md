@@ -104,6 +104,8 @@
 		- SimpleMain：最简单的应用
 ## guava : guava的基本用法
     
+## javaassist: javassist 基本用法
+
 ## javabasic: jdk的基本用法 
 - com.hry.java
     - cls: class的反射用法

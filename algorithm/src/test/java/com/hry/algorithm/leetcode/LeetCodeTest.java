@@ -103,6 +103,15 @@ public class LeetCodeTest {
     }
 
     @Test
+    public void L015Sum3(){
+        L015Sum3 l015Sum3 = new L015Sum3();
+        System.out.println(l015Sum3.threeSum_2(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println(l015Sum3.threeSum_2(new int[]{0,0,0,0}));
+        // [[-1,-1,2],[-1,0,1]]
+        System.out.println(l015Sum3.threeSum_2(new int[]{ -1,0,1,2,-1,-4}));
+    }
+
+    @Test
     public void L017LetterCombinationsofaPhoneNumber() {
         L017LetterCombinationsofaPhoneNumber l017LetterCombinationsofaPhoneNumber = new L017LetterCombinationsofaPhoneNumber();
 
@@ -111,6 +120,12 @@ public class LeetCodeTest {
 
         System.out.println(l017LetterCombinationsofaPhoneNumber.letterCombinations2("23"));
 
+
+    }
+
+    @Test
+    public void L021MergeTwoSortedLists() {
+        L021MergeTwoSortedLists l021MergeTwoSortedLists = new L021MergeTwoSortedLists();
 
     }
 
@@ -126,16 +141,7 @@ public class LeetCodeTest {
     }
 
 
-    @Test
-    public void L015Sum3(){
-        L015Sum3 l015Sum3 = new L015Sum3();
-        System.out.println(l015Sum3.threeSum_2(new int[]{-1, 0, 1, 2, -1, -4}));
-        System.out.println(l015Sum3.threeSum_2(new int[]{0,0,0,0}));
-        // [[-1,-1,2],[-1,0,1]]
-        System.out.println(l015Sum3.threeSum_2(new int[]{ -1,0,1,2,-1,-4}));
 
-
-    }
 
 }
 
