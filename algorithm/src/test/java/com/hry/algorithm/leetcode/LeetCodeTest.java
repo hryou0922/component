@@ -125,7 +125,48 @@ public class LeetCodeTest {
 
     @Test
     public void L021MergeTwoSortedLists() {
+        L021MergeTwoSortedLists.ListNode l1 = new L021MergeTwoSortedLists.ListNode(4, null);
+        L021MergeTwoSortedLists.ListNode l1_2 = new L021MergeTwoSortedLists.ListNode(2, l1);
+        L021MergeTwoSortedLists.ListNode l1_3 = new L021MergeTwoSortedLists.ListNode(1, l1_2);
+
+        L021MergeTwoSortedLists.ListNode l2 = new L021MergeTwoSortedLists.ListNode(4, null);
+        L021MergeTwoSortedLists.ListNode l2_2 = new L021MergeTwoSortedLists.ListNode(3, l2);
+        L021MergeTwoSortedLists.ListNode l2_3 = new L021MergeTwoSortedLists.ListNode(1, l2_2);
+
         L021MergeTwoSortedLists l021MergeTwoSortedLists = new L021MergeTwoSortedLists();
+        L021MergeTwoSortedLists.ListNode rtnList = l021MergeTwoSortedLists.mergeTwoLists_2(l1_3, l2_3);
+        while(rtnList != null){
+            System.out.print(rtnList.getVal()+ "　");
+            rtnList = rtnList.getNext();
+        }
+
+
+        rtnList = l021MergeTwoSortedLists.mergeTwoLists(l1_3, l2_3);
+        while(rtnList != null){
+            System.out.print(rtnList.getVal());
+            rtnList = rtnList.getNext();
+        }
+
+
+    }
+    @Test
+    public void L021MergeTwoSortedLists2() {
+        L021MergeTwoSortedLists.ListNode l1 = new L021MergeTwoSortedLists.ListNode(4, null);
+        L021MergeTwoSortedLists.ListNode l1_2 = new L021MergeTwoSortedLists.ListNode(2, l1);
+        L021MergeTwoSortedLists.ListNode l1_3 = new L021MergeTwoSortedLists.ListNode(1, l1_2);
+
+        L021MergeTwoSortedLists.ListNode l2 = new L021MergeTwoSortedLists.ListNode(4, null);
+        L021MergeTwoSortedLists.ListNode l2_2 = new L021MergeTwoSortedLists.ListNode(3, l2);
+        L021MergeTwoSortedLists.ListNode l2_3 = new L021MergeTwoSortedLists.ListNode(1, l2_2);
+
+        L021MergeTwoSortedLists l021MergeTwoSortedLists = new L021MergeTwoSortedLists();
+
+        L021MergeTwoSortedLists.ListNode rtnList = l021MergeTwoSortedLists.mergeTwoLists(l1_3, l2_3);
+        while(rtnList != null){
+            System.out.print(rtnList.getVal() + " ");
+            rtnList = rtnList.getNext();
+        }
+
 
     }
 

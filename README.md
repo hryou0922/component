@@ -51,6 +51,9 @@
          - L020ValidParentheses：
             - 重点：a. LinkedList 做为 堆栈使用，新进后出： addFirst, poll; b. 左括号加入列表，如果是右括号，则将列表数据弹出，并获取对应的右括号，并比较两者是否相同
             - 执行时间 1ms 98.83% 
+        - L021MergeTwoSortedLists
+            - 重点：a. 头节点手动创建; b. 循环向后查找，直至一个队列为空； c. 非空队列
+            - 执行 0ms , 100% 
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
