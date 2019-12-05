@@ -124,6 +124,17 @@ public class LeetCodeTest {
     }
 
     @Test
+    public void L020ValidParentheses(){
+        L020ValidParentheses l020ValidParentheses = new L020ValidParentheses();
+
+        Assert.assertEquals(true, l020ValidParentheses.isValid("()"));
+        Assert.assertEquals(true, l020ValidParentheses.isValid("()[]{}"));
+        Assert.assertEquals(false, l020ValidParentheses.isValid("(]"));
+        Assert.assertEquals(false, l020ValidParentheses.isValid("([)]"));
+        Assert.assertEquals(true, l020ValidParentheses.isValid("{[]}"));
+    }
+
+    @Test
     public void L021MergeTwoSortedLists() {
         L021MergeTwoSortedLists.ListNode l1 = new L021MergeTwoSortedLists.ListNode(4, null);
         L021MergeTwoSortedLists.ListNode l1_2 = new L021MergeTwoSortedLists.ListNode(2, l1);
@@ -170,17 +181,12 @@ public class LeetCodeTest {
 
     }
 
+
     @Test
-    public void L020ValidParentheses(){
-        L020ValidParentheses l020ValidParentheses = new L020ValidParentheses();
-
-        Assert.assertEquals(true, l020ValidParentheses.isValid("()"));
-        Assert.assertEquals(true, l020ValidParentheses.isValid("()[]{}"));
-        Assert.assertEquals(false, l020ValidParentheses.isValid("(]"));
-        Assert.assertEquals(false, l020ValidParentheses.isValid("([)]"));
-        Assert.assertEquals(true, l020ValidParentheses.isValid("{[]}"));
+    public void L022GenerateParentheses(){
+        L022GenerateParentheses l022GenerateParentheses = new L022GenerateParentheses();
+        System.out.println(l022GenerateParentheses.generateParenthesis(3));
     }
-
 
 
 

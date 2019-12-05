@@ -4,7 +4,7 @@
 - 算法：
     - book: 编程之法：面试和算法心得  https://wizardforcel.gitbooks.io/the-art-of-programming-by-july/content/a.14.html
     - leetcode分类总结 https://lefttree.gitbooks.io/leetcode-categories/sum/kSum.html
-    - 其他：https://www.douban.com/note/330562764/
+    - 其他：https://www.douban.com/note/330562764/   https://wdxtub.com/interview/14520604912864.html
 - com.hry.algorithm
     - leetcode leetcode算法题
         - L001TwoSum: https://leetcode.com/problems/two-sum/submissions/
@@ -54,6 +54,9 @@
         - L021MergeTwoSortedLists
             - 重点：a. 头节点手动创建; b. 循环向后查找，直至一个队列为空； c. 非空队列
             - 执行 0ms , 100% 
+        - L022GenerateParentheses
+            - 重点：a. 递归：结束时间； b. 递归组合字符串使用sb，测试一个分支后，需要进行回退，如删除新加的值；c. 左括号数量 > 右括号数量，才可以添加右括号；反之左括号没有限制
+            - 执行 1ms 94.76%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
