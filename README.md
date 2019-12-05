@@ -57,6 +57,11 @@
         - L022GenerateParentheses
             - 重点：a. 递归：结束时间； b. 递归组合字符串使用sb，测试一个分支后，需要进行回退，如删除新加的值；c. 左括号数量 > 右括号数量，才可以添加右括号；反之左括号没有限制
             - 执行 1ms 94.76%
+        - L023MergeKSortedLists
+            - 解法一：mergeKListsByPriorityQueue() a. 使用PriorityQueue
+                - 执行时间：6 ms 51.86%
+            - 解法二：mergeKLists(): sort + merge  -> 归并排序
+                - 执行时间：2ms 99.43
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692
