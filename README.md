@@ -62,6 +62,10 @@
                 - 执行时间：6 ms 51.86%
             - 解法二：mergeKLists(): sort + merge  -> 归并排序
                 - 执行时间：2ms 99.43
+        -  L024SwapNodesInPairs 
+            - 解法：
+                - 重点：执行循环是，使用临时变量避免出现循环
+                - 执行时间  0ms 100%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

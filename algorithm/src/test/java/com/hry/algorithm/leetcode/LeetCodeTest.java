@@ -181,6 +181,23 @@ public class LeetCodeTest {
 
     }
 
+    @Test
+    public void L024SwapNodesInPairs() {
+        L021MergeTwoSortedLists.ListNode l1 = new L021MergeTwoSortedLists.ListNode(4, null);
+        L021MergeTwoSortedLists.ListNode l1_2 = new L021MergeTwoSortedLists.ListNode(2, l1);
+        L021MergeTwoSortedLists.ListNode l1_3 = new L021MergeTwoSortedLists.ListNode(1, l1_2);
+
+        L024SwapNodesInPairs l024SwapNodesInPairs = new L024SwapNodesInPairs();
+
+        L021MergeTwoSortedLists.ListNode rtnList = l024SwapNodesInPairs.swapPairs(l1_3);
+        while(rtnList != null){
+            System.out.print(rtnList.getVal() + " ");
+            rtnList = rtnList.getNext();
+        }
+
+
+    }
+
 
     @Test
     public void L022GenerateParentheses(){
