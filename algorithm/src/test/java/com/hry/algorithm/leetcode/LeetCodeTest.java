@@ -209,6 +209,12 @@ public class LeetCodeTest {
         System.out.println(l027RemoveElement.removeElement(nums, val));
     }
 
+    @Test
+    public void L029DivideTwoIntegers(){
+        L029DivideTwoIntegers l029DivideTwoIntegers = new L029DivideTwoIntegers();
+
+        Assert.assertEquals(3, l029DivideTwoIntegers.divide(10, 3));
+    }
 
 
 
