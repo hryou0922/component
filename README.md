@@ -66,6 +66,9 @@
             - 解法：
                 - 重点：执行循环是，使用临时变量避免出现循环
                 - 执行时间  0ms 100%
+        - L027RemoveElement
+            - 解法： 双指针
+                - 执行时间 0ms 100%
     - recursive 递归算法
         - NQueen/NQueenII： 八皇后问题
     - sort：八大排序算法： https://cloud.tencent.com/developer/article/1114692

@@ -177,9 +177,14 @@ public class LeetCodeTest {
             System.out.print(rtnList.getVal() + " ");
             rtnList = rtnList.getNext();
         }
-
-
     }
+
+    @Test
+    public void L022GenerateParentheses(){
+        L022GenerateParentheses l022GenerateParentheses = new L022GenerateParentheses();
+        System.out.println(l022GenerateParentheses.generateParenthesis(3));
+    }
+
 
     @Test
     public void L024SwapNodesInPairs() {
@@ -194,16 +199,17 @@ public class LeetCodeTest {
             System.out.print(rtnList.getVal() + " ");
             rtnList = rtnList.getNext();
         }
-
-
     }
-
 
     @Test
-    public void L022GenerateParentheses(){
-        L022GenerateParentheses l022GenerateParentheses = new L022GenerateParentheses();
-        System.out.println(l022GenerateParentheses.generateParenthesis(3));
+    public void L027RemoveElement(){
+        L027RemoveElement l027RemoveElement = new L027RemoveElement();
+        int[] nums = new int[]{3,2,2,3};
+        int val = 3;
+        System.out.println(l027RemoveElement.removeElement(nums, val));
     }
+
+
 
 
 
