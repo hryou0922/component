@@ -60,7 +60,13 @@
 	- simple
 		- SimpleMain：最简单的应用
 ## guava : guava的基本用法
-    
+- com.hry.guava
+    - cache:
+        - GuavaCache: 缓存的用法
+    - concurrent:
+        - RateLimiterUtils：限流
+    - collectin:
+        - MultiCollectionDemo: MultiMap,MultiSet,BiMap,Table
 ## javaassist: javassist 基本用法
 
 ## javabasic: jdk的基本用法 
