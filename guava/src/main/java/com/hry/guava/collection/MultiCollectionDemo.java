@@ -1,6 +1,5 @@
 package com.hry.guava.collection;
 
-import com.google.common.collect.*;
 import com.hry.guava.collection.support.StudentScore;
 
 import java.util.ArrayList;

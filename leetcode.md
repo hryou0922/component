@@ -67,3 +67,7 @@
         - L029DivideTwoIntegers
             - 解法：考虑int溢出的情况，将dividend从int扩展为long，最后结果检查是否溢出
                 - 执行1ms 100%
+        - L032LongestValidParentheses：
+            - 解法一：a. 堆栈ArrayDeque + 起始值start; b. 右括号计算，没有匹配则start=i+1，否则 max(maxLength, i-start-1, i - stack.peek()) 
+                - 执行：3ms 61.73%
+            - 解法二：stack 的第一个进去的值为-1，替代start值

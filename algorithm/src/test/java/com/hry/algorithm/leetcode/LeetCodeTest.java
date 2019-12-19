@@ -216,7 +216,14 @@ public class LeetCodeTest {
         Assert.assertEquals(3, l029DivideTwoIntegers.divide(10, 3));
     }
 
+    @Test
+    public void L032LongestValidParentheses(){
+        L032LongestValidParentheses l032LongestValidParentheses = new L032LongestValidParentheses();
 
+        Assert.assertEquals(2, l032LongestValidParentheses.longestValidParentheses("(()"));
+        Assert.assertEquals(4, l032LongestValidParentheses.longestValidParentheses(")()())"));
+        Assert.assertEquals(4, l032LongestValidParentheses.longestValidParentheses(")()())()()("));
+    }
 
 
 }
