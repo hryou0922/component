@@ -1,0 +1,73 @@
+
+# 算法 algorithm
+- com.hry.algorithm
+    - leetcode leetcode算法题
+        - L001TwoSum: https://leetcode.com/problems/two-sum/submissions/
+            - twoSum_1：穷举法
+                - 执行时间25ms , 22.49%
+            - twoSum_2： 用hashmap保存访问过的value, 对每个num[i],检查hashmap中是否有target - nums[i],扫完一遍就能够得到结果
+                - 执行时间3ms, 50%
+        - AddTwoNumbers：https://leetcode.com/problems/add-two-numbers/
+            - 有疑问
+        - LongestPalindromicSubstring： 最长回文
+            - https://leetcode.com/problems/longest-palindromic-substring/submissions/
+            - 算法1: 从第0个字符开始，每个字符向左右两边扩展，判断是否是回文。考虑回文是偶数和奇数情况
+            - 执行时间：15ms, 57.06%
+        - LongestSubstringWithoutRepeatingCharacters： https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/
+            - lengthOfLongestSubstring1()方法：O(n2)，2次for循环+使用set保持已经遍历的字符
+                - 45ms 18.90%
+            - lengthOfLongestSubstring2()方法：O(n)，1此for循环 + HashMap保留每个字符最近的索引（如果当前char的索引 < j，则忽略，否则替换）
+                - 7m 82.28%
+        - MedianOfTwoSortedArrays: https://leetcode.com/problems/median-of-two-sorted-arrays/submissions/
+            - 将两个数组合并到一个数据，取中间数的值（单数：n/2, 双数：n/2-1,n/2）: a. 比较两个数组，合并到数组，直至一个数组结束; b.第一个数组跌倒到末尾; c. 第二个数组跌倒到末尾;
+            - 执行时间： 2ms 99.97
+        - L007ReverseInteger：翻转整形
+            - 考虑整形翻转后溢出的问题，新的值使用long; 
+            - 执行时间： 1ms, 100%
+        - L008StringToInteger:
+            - 重点：a. 字符串转化整形，即使使用long，还不够，需要特殊处理； b. 将char的处理分为 首字符处理+continue 和 0-9 处理  
+            - 执行时间: 1ms 100%
+        - L009PalindromeNumber: 测试整数是否为回文
+            - 重点：a. 特殊值： <0, 0<x<9;  b. 回文的判断：偶数和奇数
+            - 执行时间 7m 67.93%
+        - L012IntegeToRoman: 整形转化为罗马数字
+            - 重点：列出每位的可能值
+            - 执行时间 5ms 100%
+        - L015Sum3：从数组中找出所有的3个数相加为0的组合
+            - threeSum_1：穷举法
+                - 执行时间，太久，无法通过
+            - threeSum_1：a. sort + 双指针;  b. one + 2sum()
+                - 执行时间：43ms 38.59%
+         - L017LetterCombinationsofaPhoneNumber:
+            - letterCombinations: 递归 a. 使用 sb 保存字符； b. helper(a) = heler(idx) + heler(a-idx);  c. 每个idx处理循环字符数组: 添加到sb,执行 heler(a-idx)，从新增sb d. 当 idx 超过数字长度，则结束，将结果添加到列表中
+                - 执行时间 0ms 100%
+            - letterCombinations2 : a. LinkedList; b.将每个数字对应字符一次推入列表；在下一个数字时，循环已有所有的字符，并添加新数字所有对应的字符，并加入队列尾巴；循环直至，数字循环一遍
+                - 执行时间 0ms 100%
+         - L020ValidParentheses：
+            - 重点：a. LinkedList 做为 堆栈使用，新进后出： addFirst, poll; b. 左括号加入列表，如果是右括号，则将列表数据弹出，并获取对应的右括号，并比较两者是否相同
+            - 执行时间 1ms 98.83% 
+        - L021MergeTwoSortedLists
+            - 重点：a. 头节点手动创建; b. 循环向后查找，直至一个队列为空； c. 非空队列
+            - 执行 0ms , 100% 
+        - L022GenerateParentheses
+            - 重点：a. 递归：结束时间； b. 递归组合字符串使用sb，测试一个分支后，需要进行回退，如删除新加的值；c. 左括号数量 > 右括号数量，才可以添加右括号；反之左括号没有限制
+            - 执行 1ms 94.76%
+        - L023MergeKSortedLists
+            - 解法一：mergeKListsByPriorityQueue() a. 使用PriorityQueue
+                - 执行时间：6 ms 51.86%
+            - 解法二：mergeKLists(): sort + merge  -> 归并排序
+                - 执行时间：2ms 99.43
+        -  L024SwapNodesInPairs 
+            - 解法：
+                - 重点：执行循环是，使用临时变量避免出现循环
+                - 执行时间  0ms 100%
+        - L027RemoveElement
+            - 解法： 双指针
+                - 执行时间 0ms 100%
+        - L029DivideTwoIntegers
+            - 解法：考虑int溢出的情况，将dividend从int扩展为long，最后结果检查是否溢出
+                - 执行1ms 100%
+        - L032LongestValidParentheses：
+            - 解法一：a. 堆栈ArrayDeque + 起始值start; b. 右括号计算，没有匹配则start=i+1，否则 max(maxLength, i-start-1, i - stack.peek()) 
+                - 执行：3ms 61.73%
+            - 解法二：stack 的第一个进去的值为-1，替代start值

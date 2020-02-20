@@ -21,6 +21,9 @@
         <module>zookeeper</module>
         <module>thumbnailator</module>
         <module>guava</module>
+        <module>algorithm</module>
+        <module>mock</module>
+        <module>javaassist</module>
     </modules>
 
     <properties>
