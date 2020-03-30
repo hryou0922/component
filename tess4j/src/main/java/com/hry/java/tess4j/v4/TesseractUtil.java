@@ -41,4 +41,21 @@ public class TesseractUtil {
         }
         return image;
     }
+
+    /**
+     * 优化图片
+     * @param image
+     * @return
+     */
+    public static BufferedImage optimizeImage(BufferedImage image){
+        //按指定宽高创建一个图像副本
+        //image = ImageHelper.getSubImage(image, 0, 0, image.getWidth(), image.getHeight());
+        //图像转换成灰度的简单方法 - 黑白处理
+        image = ImageHelper.convertImageToGrayscale(image);
+        // 图片放大倍数,增强识别率 - 放大n倍图像
+        image = ImageHelper.getScaledInstance(image, image.getWidth() * 3, image.getHeight() * 3);
+        // 图片锐化
+        image = ImageHelper.convertImageToBinary(image);
+        return image;
+    }
 }

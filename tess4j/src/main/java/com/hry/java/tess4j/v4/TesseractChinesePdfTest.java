@@ -26,7 +26,7 @@ public class TesseractChinesePdfTest {
 		instance.setLanguage("chi_sim");
       
 
-        File pdfDoc = new File(root.getAbsoluteFile() + "/001.pdf");
+        File pdfDoc = new File(root.getAbsoluteFile() + "/netty2-2.pdf");
         File pngImageFiles[] = PdfUtilities.convertPdf2Png(pdfDoc);
 
         for (int i = 0; i < pngImageFiles.length; i++) {

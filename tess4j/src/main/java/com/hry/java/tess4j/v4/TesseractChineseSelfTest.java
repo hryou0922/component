@@ -30,7 +30,7 @@ public class TesseractChineseSelfTest {
 		 */
         tessreact.setDatapath(System.getProperty("user.dir") + "/tess4j/src/main/resources/com/hry/java/tess4j/v4/tessdata/");
         // 设置识别语言，默认为英文
-        tessreact.setLanguage("chi_sim");
+        tessreact.setLanguage("chi_sim+eng");
 
     	boolean opt = false;
 
@@ -50,8 +50,9 @@ public class TesseractChineseSelfTest {
 
 				String fileName = file.toString().substring(
 						file.toString().lastIndexOf("\\") + 1);
-				result = result.replaceAll(" ","").replaceAll("\\r","")
-					.replaceAll("\\n","");
+				result = result.replaceAll(" ","");
+						// .replaceAll("\\r","")
+				//	.replaceAll("\\n","");
 		//		System.out.println("图片名：" + fileName + " 识别结果：" );
 		//		System.out.println();
 				arrayList.add(result);

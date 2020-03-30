@@ -136,6 +136,8 @@
 	- TesseractChineseTest: OCR解析中文图片截图
 	- TesseractPdfTest：OCR解析pdf英文文档
 	- TesseractTest：OCR解析图片
+    - 源码：https://github.com/nguyenq/tess4j/tree/tess4j-4.5.1/src/main/java/com/recognition/software/jdeskew
+   
 # thumbnailator:生成图像缩略图
 - thumbnailator是一个用来生成图像缩略图的Java类库
 - com.hry.java.thumbnailator.simple： 演示组件对图片如下的操作
