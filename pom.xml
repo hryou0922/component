@@ -24,6 +24,7 @@
         <module>algorithm</module>
         <module>mock</module>
         <module>javaassist</module>
+        <module>mahout</module>
     </modules>
 
     <properties>
