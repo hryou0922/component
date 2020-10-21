@@ -126,6 +126,14 @@
 ## mock: mock的基本用法
 - com.hry.mock
     - third：调用第三方的mock测试
+    - base: 
+        - MockitBaseTest：
+            - 基本功能测试,when/thenReturn, when/thenThrow, when/thenAnswer 
+            - doAnswer/spy
+            - verify：调用次数、最少调用次数、最多调用次数；固定参数，有条件参数
+            - ReflectionTestUtils.setField：将mock对象设置为委托对象到成员变量
+        - MockitoTest： mockit 其他属性的补充
+        - MockMvcTest: 测试MockMvc
 
 ## netty: netty的用法总结
 - com.hry.java.netty

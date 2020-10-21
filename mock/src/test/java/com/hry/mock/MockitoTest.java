@@ -3,12 +3,7 @@ package com.hry.mock;
 import org.junit.Test;
 import org.mockito.*;
 import org.mockito.exceptions.verification.NoInteractionsWanted;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.*;
 
 import static org.junit.Assert.assertEquals;
@@ -27,49 +22,6 @@ import static org.mockito.Mockito.*;
  * @date: 2019/10/8 19:53
  */
 public class MockitoTest {
-
-    /**
-     * 2.1 验证行为
-     */
-    @Test
-    public void verify_behaviour(){
-        //模拟创建一个List对象
-        List mock = mock(List.class);
-        //使用mock的对象
-        mock.add(1);
-        mock.clear();
-        // 验证add(1)和clear() 方法是否有且只被调用过一次
-        // Verifies certain behavior <b>happened once</b>.
-        verify(mock).add(1);
-        verify(mock).clear();
-    }
-
-    // ======= 2.2 模拟我们所期望的结果 begin ===========
-    /**
-     * 2.2 模拟我们所期望的结果
-     */
-    @Test
-    public void when_thenReturn(){
-        //mock一个Iterator类
-        Iterator iterator = mock(Iterator.class);
-        //预设当iterator调用next()时第一次返回hello，第n次都返回world
-        when(iterator.next()).thenReturn("hello").thenReturn("world");
-        //使用mock的对象
-        String result = iterator.next() + " " + iterator.next() + " " + iterator.next();
-        //验证结果
-        assertEquals("hello world world",result);
-    }
-
-    @Test(expected = IOException.class)
-    public void when_thenThrow() throws IOException {
-        OutputStream outputStream = mock(OutputStream.class);
-        OutputStreamWriter writer = new OutputStreamWriter(outputStream);
-        //预设当流关闭时抛出异常
-        doThrow(new IOException()).when(outputStream).close();
-        outputStream.close();
-    }
-
-    // ======= 2.2 模拟我们所期望的结果 end ===========
 
     // ======= 2.3  RETURNS_SMART_NULLS和RETURNS_DEEP_STUBS begin ===========
     /**
@@ -287,74 +239,6 @@ public class MockitoTest {
 
     // ======= 2.8 捕获参数来进一步断言  end ===========
 
-    // ======= 2.9 使用方法预期回调接口生成期望值（Answer结构）  begin ===========
-    @Test
-    public void answerTest(){
-        // 初始化mock的代码
-        MockitoAnnotations.initMocks(this);
-
-        when(mockList.get(anyInt())).thenAnswer(new CustomAnswer());
-        assertEquals("hello world:0",mockList.get(0));
-        assertEquals("hello world:999",mockList.get(999));
-    }
-
-    private class CustomAnswer implements Answer<String> {
-        @Override
-        public String answer(InvocationOnMock invocation) throws Throwable {
-            Object[] args = invocation.getArguments();
-            return "hello world:"+args[0];
-        }
-    }
-    // ======= 2.9 使用方法预期回调接口生成期望值（Answer结构）  end ===========
-
-    // ======= 2.10  修改对未预设的调用返回默认期望   begin ===========
-    @Test
-    public void unstubbed_invocations(){
-        //mock对象使用Answer来对未预设的调用返回默认期望值
-        List mock = mock(List.class,new Answer() {
-            @Override
-            public Object answer(InvocationOnMock invocation) throws Throwable {
-                return 999;
-            }
-        });
-        //下面的get(1)没有预设，通常情况下会返回NULL，但是使用了Answer改变了默认期望值
-        assertEquals(999, mock.get(1));
-        //下面的size()没有预设，通常情况下会返回0，但是使用了Answer改变了默认期望值
-        assertEquals(999,mock.size());
-    }
-    // ======= 2.10  修改对未预设的调用返回默认期望  end ===========
-
-    // ======= 2.11 用spy监控真实对象    begin ===========
-
-    /**
-     * Mock不是真实的对象，它只是用类型的class创建了一个虚拟对象，并可以设置对象行为
-     * Spy是一个真实的对象，但它可以设置对象行为
-     * InjectMocks创建这个类的对象并自动将标记@Mock、@Spy等注解的属性值注入到这个中
-     *
-     */
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void spy_on_real_objects(){
-        List list = new LinkedList();
-        List spy = spy(list);
-        //下面预设的spy.get(0)会报错，因为会调用真实对象的get(0)，所以会抛出越界异常
-        //when(spy.get(0)).thenReturn(3);
-
-        //使用doReturn-when可以避免when-thenReturn调用真实对象api
-        doReturn(999).when(spy).get(999);
-        //预设size()期望值
-        when(spy.size()).thenReturn(100);
-        //调用真实对象的api
-        spy.add(1);
-        spy.add(2);
-        assertEquals(100,spy.size());
-        assertEquals(1,spy.get(0));
-        assertEquals(2,spy.get(1));
-        verify(spy).add(1);
-        verify(spy).add(2);
-        assertEquals(999,spy.get(999));
-        spy.get(2);
-    }
-    // ======= 2.11 用spy监控真实对象    end ===========
 
     // ======= 2.12 真实的部分mock  begin ===========
     @Test
@@ -388,34 +272,6 @@ public class MockitoTest {
         assertEquals(0,list.size());
     }
     // ======= 2.13 重置mock  end ===========
-
-    // ======= 2.14  验证确切的调用次数   begin ===========
-    @Test
-    public void verifying_number_of_invocations(){
-        List list = mock(List.class);
-        list.add(1);
-        list.add(2);
-        list.add(2);
-        list.add(3);
-        list.add(3);
-        list.add(3);
-        //验证是否被调用一次，等效于下面的times(1)
-        verify(list).add(1);
-        verify(list,times(1)).add(1);
-        //验证是否被调用2次
-        verify(list,times(2)).add(2);
-        //验证是否被调用3次
-        verify(list,times(3)).add(3);
-        //验证是否从未被调用过
-        verify(list,never()).add(4);
-        //验证至少调用一次
-        verify(list,atLeastOnce()).add(1);
-        //验证至少调用2次
-        verify(list,atLeast(2)).add(2);
-        //验证至多调用3次
-        verify(list,atMost(3)).add(3);
-    }
-    // ======= 2.14  验证确切的调用次数  end ===========
 
     // ======= 2.15 连续调用  begin ===========
     @Test(expected = RuntimeException.class)
