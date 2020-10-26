@@ -150,17 +150,6 @@ public class MockitoTest {
         }
     }
 
-    // 注意：如果你使用了参数匹配，那么所有的参数都必须通过matchers来匹配，如下代码：
-    @Test
-    public void all_arguments_provided_by_matchers(){
-        Comparator comparator = mock(Comparator.class);
-        comparator.compare("nihao","hello");
-        //如果你使用了参数匹配，那么所有的参数都必须通过matchers来匹配
-        verify(comparator).compare(anyString(),eq("hello"));
-        //下面的为无效的参数匹配使用
-        //verify(comparator).compare(anyString(),"hello");
-    }
-
     // ======= 2.6 参数匹配  end ===========
 
 
