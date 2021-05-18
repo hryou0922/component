@@ -6,30 +6,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="javabasic" />
-        <module name="zookeeper" />
-        <module name="httpclient" />
-        <module name="netty" />
-        <module name="apache" />
-        <module name="tess4j" />
-        <module name="lua" />
         <module name="fastjson" />
+        <module name="httpclient" />
+        <module name="pinyin4j" />
+        <module name="lua" />
+        <module name="netty" />
         <module name="guava" />
         <module name="jsoup" />
+        <module name="javabasic" />
+        <module name="mock" />
         <module name="thumbnailator" />
+        <module name="zookeeper" />
+        <module name="springboot" />
+        <module name="tess4j" />
+        <module name="javaassist" />
+        <module name="algorithm" />
+        <module name="apache" />
+        <module name="mahout" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="algorithm" options="-parameters" />
       <module name="apache" options="-parameters" />
       <module name="fastjson" options="-parameters" />
       <module name="guava" options="-parameters" />
       <module name="httpclient" options="-parameters" />
+      <module name="javaassist" options="-parameters" />
       <module name="javabasic" options="-parameters" />
       <module name="jsoup" options="-parameters" />
       <module name="lua" options="-parameters" />
+      <module name="mahout" options="-parameters" />
+      <module name="mock" options="-parameters" />
       <module name="netty" options="-parameters" />
+      <module name="pinyin4j" options="-parameters" />
+      <module name="springboot" options="-parameters" />
       <module name="tess4j" options="-parameters" />
       <module name="thumbnailator" options="-parameters" />
       <module name="zookeeper" options="-parameters" />
