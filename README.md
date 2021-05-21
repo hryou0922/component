@@ -75,6 +75,8 @@
     - consistencyhash: 一致性哈希散列函数的实现
     - concurrent: 多线程用法
         - Semaphore信号量用法
+    - magicnumber：文件魔数
+        -  
     - lambda: lambda的用法 
         - CollectorsDemo
             - 过滤：按照给定的要求对集合进行筛选满足条件的元素，java8提供的筛选操作包括：filter、distinct、limit、skip
@@ -161,4 +163,4 @@
 - com.hry.java.zookeeper：暂时没试试
     - 1
 
-
+## pinyin4j 汉字转拼音
