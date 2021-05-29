@@ -27,6 +27,7 @@
         <module>mahout</module>
         <module>pinyin4j</module>
         <module>springboot</module>
+        <module>mybatisplus</module>
     </modules>
 
     <properties>

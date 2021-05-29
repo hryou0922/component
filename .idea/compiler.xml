@@ -10,6 +10,7 @@
         <module name="httpclient" />
         <module name="pinyin4j" />
         <module name="lua" />
+        <module name="mybatisplus" />
         <module name="netty" />
         <module name="guava" />
         <module name="jsoup" />
@@ -39,6 +40,7 @@
       <module name="lua" options="-parameters" />
       <module name="mahout" options="-parameters" />
       <module name="mock" options="-parameters" />
+      <module name="mybatisplus" options="-parameters" />
       <module name="netty" options="-parameters" />
       <module name="pinyin4j" options="-parameters" />
       <module name="springboot" options="-parameters" />

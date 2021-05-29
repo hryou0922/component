@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hry.component.mybatisplus.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.hry.component.mybatisplus.model.User">
+        <result column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="age" jdbcType="INTEGER" property="age" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <association property="userAddress" javaType="com.hry.component.mybatisplus.model.UserAddress">
+            <result column="address" jdbcType="VARCHAR" property="address" />
+        </association>
+    </resultMap>
+
+    <resultMap id="addressResultMap" type="com.hry.component.mybatisplus.model.UserAddress">
+        <result column="id" jdbcType="BIGINT" property="id" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+    </resultMap>
+
+
+    <select id="searchPageWithQry"  resultMap="BaseResultMap"
+            parameterType="com.hry.component.mybatisplus.qry.UserQry" >
+        SELECT * from user a LEFT JOIN user_address b on a.id = b.id
+        WHERE 1=1
+        <if test="req.id !=null">
+            and a.id = #{req.id}
+        </if>
+    </select>
+
+
+
+    <select id="searchPage" resultMap="BaseResultMap">
+        SELECT * from user a LEFT JOIN user_address b on a.id = b.id
+        ${ew.customSqlSegment}
+    </select>
+
+</mapper>

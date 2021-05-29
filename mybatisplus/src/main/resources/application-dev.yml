@@ -1,0 +1,16 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+mybatis-plus:
+  global-config:
+    db-config:
+      select-strategy: not_empty
+  configuration:  # 打印sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #  扫描xml包下面的xml文件
+  mapper-locations: 'classpath: com/hry/component/mybatisplus/mapper/**Mapper.xml'

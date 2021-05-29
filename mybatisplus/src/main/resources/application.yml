@@ -1,0 +1,8 @@
+# port
+server:
+  port: 8181
+  servlet:
+    context-path: /mybatis-plus
+#apollo:
+#  bootstrap:
+#    enabled: true
