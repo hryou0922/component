@@ -79,6 +79,27 @@ public class InsertUpdateDeleteTest extends TestBase {
     }
 
     @Test
+    public void updateVersion() {
+        long id = 1L;
+        User oldUser = userMapper.selectById(id);
+        if(oldUser == null){
+            System.out.println("无法找到id为="+id+"的记录!");
+            return;
+        }
+
+        User user = new User();
+        user.setId(id);
+        user.setName("test");
+        // 如果要触发乐观锁，必须要有@version注释的字段且有值，否则不会有乐观锁
+        user.setVersion(oldUser.getVersion());
+        // user.setVersion(123);
+
+        // 如果更新成功，则返回1，否则返回0，如果返回0，则需要业务端进行重试更新操作
+        int result = userMapper.updateById(user);
+        System.out.println("result=" + result);
+    }
+
+    @Test
     public void deleteById() {
         int result = userMapper.deleteById(999);
         System.out.println("result=" + result);

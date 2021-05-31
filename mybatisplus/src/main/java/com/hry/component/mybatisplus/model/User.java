@@ -1,17 +1,24 @@
 package com.hry.component.mybatisplus.model;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.Version;
 import com.hry.component.mybatisplus.utils.CommonJsonUtils;
 
 /**
  * @author: huangrongyou@yixin.im
  * @date: 2021/5/26 17:25
  */
+@TableName
 public class User {
     private Long id;
     private String name;
     private Integer age;
     private String email;
+    @Version
+    private Integer version;
 
+    @TableField(exist = false)
     private UserAddress userAddress;
 
     public Long getId() {
@@ -52,6 +59,14 @@ public class User {
 
     public void setUserAddress(UserAddress userAddress) {
         this.userAddress = userAddress;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
     @Override
