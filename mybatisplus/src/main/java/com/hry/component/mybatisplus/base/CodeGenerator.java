@@ -1,19 +1,12 @@
 package com.hry.component.mybatisplus.base;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;
-import com.baomidou.mybatisplus.generator.config.po.TableField;
-import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
-import org.springframework.util.StringUtils;
-
-import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * 代码生成器
@@ -21,26 +14,15 @@ import java.util.Scanner;
  * @date: 2021/5/27 10:47
  */
 public class CodeGenerator {
-    /**
-     * <p>
-     * 读取控制台内容
-     * </p>
-     */
-    public static String scanner(String tip) {
-        Scanner scanner = new Scanner(System.in);
-        StringBuilder help = new StringBuilder();
-        help.append("请输入" + tip + "：");
-        System.out.println(help.toString());
-        if (scanner.hasNext()) {
-            String ipt = scanner.next();
-            if (!StringUtils.isEmpty(ipt)) {
-                return ipt;
-            }
-        }
-        throw new MybatisPlusException("请输入正确的" + tip + "！");
-    }
 
     public static void main(String[] args) {
+        // 代码路径
+        String codeDir = "D:\\tmp\\src";
+        // 包路径
+        String parentPackage = "im.yixin.simu.client.ipasssimu";
+        // 指定表名（可以同时操作多个表，使用 , 隔开）（需要修改）
+        String[] tables = new String[]{"group_config","dev_online","dev_data"};
+
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -48,7 +30,7 @@ public class CodeGenerator {
         GlobalConfig gc = new GlobalConfig();
         // String projectPath = System.getProperty("user.dir");
         // 填写代码生成的目录(需要修改)
-        String projectPath = "D:\\tmp\\src";
+        String projectPath = codeDir;
         // 拼接出代码最终输出的目录
         gc.setOutputDir(projectPath + "/src/main/java");
         // 配置开发者信息（可选）（需要修改）
@@ -69,6 +51,7 @@ public class CodeGenerator {
         gc.setServiceName("%sService");
         gc.setServiceImplName("%sServiceImpl");
         gc.setMapperName("%sMapper");
+        gc.setEntityName("%sModel");
         // 设置 resultMap
         gc.setBaseResultMap(true);
         gc.setBaseColumnList(true);
@@ -87,7 +70,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         // 配置父包名（需要修改）
-        pc.setParent("com.hry.component.mybatisplus");
+        pc.setParent(parentPackage);
         // 配置模块名（需要修改）
         // pc.setModuleName("test_mybatis_plus");
         // 配置 entity 包名
@@ -109,7 +92,7 @@ public class CodeGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 指定表名（可以同时操作多个表，使用 , 隔开）（需要修改）
-        strategy.setInclude("log_202105");
+        strategy.setInclude(tables);
 
         // strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
         // 配置数据表与实体类名之间映射的策略
@@ -119,42 +102,42 @@ public class CodeGenerator {
 
         //  一般表以上的配置就可以，但是 以上的配置里 log_202105 会输出 Log202105开头的类，如 Log202105ServiceImpl。 不符合要求，这里使用自定义
         // 通过INameConvert 自定义表名 或 字段名称： 这个配置同时会覆盖 setNaming() 和 setColumnNaming() 里的设置
-        strategy.setNameConvert(new INameConvert() {
-            @Override
-            public String entityNameConvert(TableInfo tableInfo) {
-                return "Log";
-            }
-
-            @Override
-            public String propertyNameConvert(TableField field) {
-                String name = field.getColumnName();
-                // 快速检查
-                if (com.baomidou.mybatisplus.core.toolkit.StringUtils.isBlank(name)) {
-                    // 没必要转换
-                    return StringPool.EMPTY;
-                }
-                String tempName = name;
-                // 大写数字下划线组成转为小写 , 允许混合模式转为小写
-                if (com.baomidou.mybatisplus.core.toolkit.StringUtils.isCapitalMode(name) || com.baomidou.mybatisplus.core.toolkit.StringUtils.isMixedMode(name)) {
-                    tempName = name.toLowerCase();
-                }
-                StringBuilder result = new StringBuilder();
-                // 用下划线将原始字符串分割
-                String[] camels = tempName.split(ConstVal.UNDERLINE);
-                // 跳过原始字符串中开头、结尾的下换线或双重下划线
-                // 处理真正的驼峰片段
-                Arrays.stream(camels).filter(camel -> !com.baomidou.mybatisplus.core.toolkit.StringUtils.isBlank(camel)).forEach(camel -> {
-                    if (result.length() == 0) {
-                        // 第一个驼峰片段，全部字母都小写
-                        result.append(camel.toLowerCase());
-                    } else {
-                        // 其他的驼峰片段，首字母大写
-                        result.append(capitalFirst(camel));
-                    }
-                });
-                return result.toString();
-            }
-        });
+//        strategy.setNameConvert(new INameConvert() {
+//            @Override
+//            public String entityNameConvert(TableInfo tableInfo) {
+//                return "Log";
+//            }
+//
+//            @Override
+//            public String propertyNameConvert(TableField field) {
+//                String name = field.getColumnName();
+//                // 快速检查
+//                if (com.baomidou.mybatisplus.core.toolkit.StringUtils.isBlank(name)) {
+//                    // 没必要转换
+//                    return StringPool.EMPTY;
+//                }
+//                String tempName = name;
+//                // 大写数字下划线组成转为小写 , 允许混合模式转为小写
+//                if (com.baomidou.mybatisplus.core.toolkit.StringUtils.isCapitalMode(name) || com.baomidou.mybatisplus.core.toolkit.StringUtils.isMixedMode(name)) {
+//                    tempName = name.toLowerCase();
+//                }
+//                StringBuilder result = new StringBuilder();
+//                // 用下划线将原始字符串分割
+//                String[] camels = tempName.split(ConstVal.UNDERLINE);
+//                // 跳过原始字符串中开头、结尾的下换线或双重下划线
+//                // 处理真正的驼峰片段
+//                Arrays.stream(camels).filter(camel -> !com.baomidou.mybatisplus.core.toolkit.StringUtils.isBlank(camel)).forEach(camel -> {
+//                    if (result.length() == 0) {
+//                        // 第一个驼峰片段，全部字母都小写
+//                        result.append(camel.toLowerCase());
+//                    } else {
+//                        // 其他的驼峰片段，首字母大写
+//                        result.append(capitalFirst(camel));
+//                    }
+//                });
+//                return result.toString();
+//            }
+//        });
         // 配置 lombok 模式
         strategy.setEntityLombokModel(false);
         // 配置 rest 风格的控制器（@RestController）
