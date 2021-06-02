@@ -59,7 +59,7 @@ public class InsertUpdateDeleteTest extends TestBase {
     public void updateById() {
         User user = new User();
         // 主键如果不设置，则设置自动值
-        user.setId(1234l);
+        user.setId(1399638507467673602L);
         user.setName("test");
         int result = userMapper.updateById(user);
         System.out.println("result=" + result);
