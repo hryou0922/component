@@ -21,7 +21,7 @@ public class CodeGenerator {
         // 包路径
         String parentPackage = "im.yixin.simu.client.ipasssimu";
         // 指定表名（可以同时操作多个表，使用 , 隔开）（需要修改）
-        String[] tables = new String[]{"group_config","dev_online","dev_data"};
+        String[] tables = new String[]{"group_config","dev_online","dev_data", "dev_last_info"};
 
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
